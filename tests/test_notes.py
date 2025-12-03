@@ -11,3 +11,14 @@ from lib.notes import *
 def test_when_not_a_string():
     output = includes_todo(5)
     assert output == "Please enter a string"
+    
+# output is true when #TODO is in string, e.g. includes_todo("#TODO buy milk") = True
+def test_return_true_when_todo_is_in_string():
+    output = includes_todo('#TODO buy milk')
+    assert output == True
+    
+# output is fales when there is no #TODO, e.g. includes_todo("buy milk") = False
+def test_return_false_when_no_todo_in_string():
+    output = includes_todo('buy milk')
+    assert output == False
+     
