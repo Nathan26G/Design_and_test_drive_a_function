@@ -22,3 +22,12 @@ def test_return_false_when_no_todo_in_string():
     output = includes_todo('buy milk')
     assert output == False
      
+# output is false when #TODO is almost in string e.g 
+def test_return_false_when_todo_almost_in_string():
+    output = includes_todo('TODO buy milk')
+    assert output == False
+
+# output is false when #TODO is almost in string e.g. includes_todo("#TO buy milk") == False 
+def test_return_false_when_todo_almost_in_string1():
+    output = includes_todo('#TO buy milk')
+    assert output == False

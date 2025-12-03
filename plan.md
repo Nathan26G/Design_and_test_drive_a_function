@@ -24,3 +24,12 @@ True
 - output is true when #TODO is in string, e.g. includes_todo("#TODO buy milk") = True
 
 - output is fales when there is no #TODO, e.g. includes_todo("buy milk") = False
+
+- output is false when #TODO is almost in string e.g 
+includes_todo("TODO buy milk") == False
+
+- output is false when #TODO is almost in string e.g. 
+includes_todo("#TO buy milk") == False 
+
+- output is false when #TODO is almost in string e.g. 
+includes_todo("#todo buy milk") == False 
